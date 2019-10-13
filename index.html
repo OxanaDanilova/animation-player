@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="style.css">
+    <title>CodeJam-Animation Player</title>
+</head>
+<body id="body">
+    <header>
+        <div class="header1"></div>
+        <h1>CodeJam-Animation Player</h1>
+        <div class="header2"></div>
+    </header>
+    <div class="main">
+    <div class="draw-instr">
+    <section class="palette">
+        <div class="paint-bucket">
+            <button type="button" class="paint-btn" id="paint-btn"></button>
+          <!--   <div class="text-btn">Paint bucket</div> -->
+        </div>
+
+        <div class="choose-color">
+                <button type="button" class="choose-btn" id="choose-btn"></button>
+               <!--  <div class="text-btn">Choose color</div> -->
+        </div>
+        <div class="move">
+                <button type="button" class="move-btn" id="move-btn"></button>
+              <!--   <div class="text-btn">Move</div> -->
+        </div>
+        <div class="transform">
+                <button type="button" class="transform-btn" id="transform-btn"></button>
+           <!--      <div class="text-btn">Transform</div> -->
+        </div>
+    </section>
+    <section class="colors">
+           <div class="red">
+                <div class="red-btn"></div>
+                 </div>
+        <div class="blue">
+                <div class="blue-btn"></div>
+        </div>
+    </section> 
+</div>
+<div class="frames" id = "frames">
+        <div class="frame current" id='frame'>
+            <input type="button" class="delete" id='delete' value="x">
+                <canvas id="frame-item" class="frame-item" width="140" height="140"></canvas>
+            <div class="numb" id='numb'>1</div>
+        </div>
+        <input type="button" value="Add new frame" class="add-frame" id="add-frame">
+</div>
+<div class="canvas-main" id='canvas-main'>
+       <div class="row">
+            <div class="figure fig1" id='1' draggable="false"></div>
+            <div class="figure fig2" id='2'draggable="false"></div>
+            <div class="figure fig3" id='3'draggable="false"></div>
+        </div>
+        <div class="row">              
+            <div class="figure fig4" id='4' draggable="false"></div>
+            <div class="figure fig5" id='5' draggable="false"></div>
+            <div class="figure fig6" id='6' draggable="false"></div>
+        </div>
+        <div class="row">               
+            <div class="figure circle fig7" id='7' draggable="false"></div>
+            <div class="figure fig8" id='8' draggable="false"></div>
+            <div class="figure fig9" id='9' draggable="false"></div> 
+        </div>
+               
+       
+</div>
+<div class="preview">
+    <div class="wrapper-can">
+            <canvas id="canvas-preview" class="canvas-preview" width="140" height="140"></canvas>
+    </div>
+        
+        <div class="preview-control">
+            <input type="button" value="Less FPS" id='less' class='less'>
+            <div class="fps" id='fps'>1</div>
+            <input type="button" value="More FPS" id='more' class='more'>
+        </div>
+
+</div>
+</div>
+
+   <script src="../animation-player/index.js"></script>
+
+    
+</body>
+</html>

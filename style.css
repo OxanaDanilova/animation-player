@@ -1,0 +1,364 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    width: 1440px;
+    height: 900px;
+    margin: 0 auto;   
+    display: flex;
+    flex-direction: column; 
+}
+
+header {
+    height: 50px;
+    display: flex;
+    box-shadow: 2px 10px 9px #bbbbbb;
+}
+
+.header1 {
+    width: 30px;
+    height: 20px;
+    background-image: url(../palette/images/header1.png);
+    margin: 14px;
+}
+
+header h1 {
+    font-size: 21px;
+    font-family: Arial;
+    margin: 11px 1050px 11px 13px;
+}
+
+.header2 {
+    width: 15px;
+    height: 20px;
+    background-image: url(../palette/images/header2.png);
+    margin: 14px;
+}
+
+.main {
+    display: flex;
+    width: 1440px;
+    justify-content: space-between;
+    
+}
+
+.frames {
+    width: 240px;
+    display: flex;
+    flex-direction: column;
+    border: 1px solid #e0e0e0;
+    box-shadow: 2px 10px 9px #bbbbbb;
+}
+
+.frame {
+    width: 170px;
+    height: 150px;
+    border: 1px solid #e0e0e0;
+    margin: 15px auto;
+    display: flex;
+    justify-content: center;
+}
+
+.current {
+    border: blueviolet 1px solid;
+}
+
+.add-frame {
+    width: 150px;
+    height: 25px;
+    margin: 10px auto;
+}
+
+.canvas-main {
+    width: 750px;
+    border: 1px solid #e0e0e0;
+    box-shadow: 2px 10px 9px #bbbbbb;
+   }
+
+.row {
+    display: flex;
+    place-content: center;
+}
+
+.preview-control {
+    width: 220px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    margin: 1px auto;
+}
+
+.fps, .less, .more {
+    width: 70px;
+    height: 30px;
+    border: 1px solid #e0e0e0;
+    text-align: center;
+}
+
+.less, .more, .add-frame, .paint-btn, .choose-btn, .transform-btn, .delete:hover {
+    cursor: pointer;
+}
+
+.delete {
+    width: 15px;
+    height: 15px;
+    background-color: #cccccc;
+    z-index: 10;
+}
+
+.numb {
+    width: 15px;
+    height: 15px;
+    background-color: #cccccc;
+    z-index: 10;
+}
+
+
+
+.preview {
+    width: 300px;
+    height: 300px;
+    border: 1px solid #e0e0e0;
+    box-shadow: 2px 10px 9px #bbbbbb;
+    display: flex;
+    flex-direction: column;
+    place-content: space-around;
+    justify-content: center;
+}
+
+.wrapper-can {
+    width: 150px;
+    height: 150px;
+    display: flex;
+    justify-content: center;
+    margin: 5px auto;
+}
+
+.palette {
+    width: 48px;
+    height: 211px;
+    margin-top: 80px;
+    border: 1px solid #e0e0e0;
+    padding: 7px;
+    box-shadow: 2px 10px 9px #bbbbbb;
+}
+
+.paint-bucket, .move, .transform {
+    display: flex;
+    margin-bottom: 26px;
+
+}
+
+.paint-btn {
+    height: 30px;
+    width: 35px;
+    border: none;
+    background-image: url(../palette/images/paint-btn.png);
+    background-repeat: no-repeat;
+    background-color: transparent;
+    vertical-align: middle;
+   /*  margin-right: 20px; */
+}
+
+.text-btn {
+    width: 120px;
+    padding-top: 6px;
+    font-family: Arial;
+    font-size: 15px;
+    letter-spacing: 0.04em;
+    color: #757575;
+    padding-left: 16px;     
+}
+
+.choose-color {
+    display: flex;
+    margin-bottom: 36px;
+}
+
+.choose-btn {
+    height: 30px;
+    width: 35px;
+    border: none;
+    background-image: url(../palette/images/choose-color-btn.png);
+    background-repeat: no-repeat;
+    background-color:  #c4c4c4;
+    vertical-align: middle;
+    margin-right: 20px;
+}
+
+.choose-color::after{
+    content: "";
+    position: absolute;
+    top: 241px;
+    left: 233px;
+    border: 1px solid #e0e0e0;
+    width: 61px;
+
+}
+
+.move {
+    display: flex;
+    margin-bottom: 22px;
+
+}
+
+.move-btn {
+    height: 30px;
+    width: 35px;
+    border: none;
+    background-image: url(../palette/images/move-btn.png);
+    background-repeat: no-repeat;
+    background-color: transparent;
+    vertical-align: middle;
+    margin-right: 18px;
+    margin-left: 3px
+}
+
+.transform-btn {
+    height: 30px;
+    width: 35px;
+    border: none;
+    background-image: url(../palette/images/transform-btn.png);
+    background-repeat: no-repeat;
+    background-color: transparent;
+    vertical-align: middle;
+    margin-right: 20px;
+    margin-left: 5px;
+}
+
+.transform div {
+    padding-top: 0px;
+    padding-left: 11px;
+}
+
+
+
+.colors {
+    width: 48px;
+    height: 72px;
+    margin-top: 65px;
+    border: 1px solid #e0e0e0;
+    padding: 10px 7px;
+    box-shadow: 2px 10px 9px #bbbbbb;
+}
+
+.current-color, .prev-color, .red, .blue {
+    display: flex;
+    justify-content: center;
+    }
+
+.cur-col-btn {
+    width: 20px;
+    height: 20px;
+    border-radius: 10px;
+    border: 1px solid #000000;
+    background-color:  #c4c4c4;
+    margin-right: 18px;
+}
+
+.col-text-btn {
+    width: 120px;
+    padding-top: 1px;
+    font-family: Arial;
+    font-size: 15px;
+    letter-spacing: 0.04em;
+    color: #757575;
+    padding-left: 1px;     
+}
+
+.prev-color {
+    margin-bottom: 45px;
+}
+
+.prev-col-btn {
+    width: 20px;
+    height: 20px;
+    border-radius: 10px;
+    border: 1px solid #000000;
+    background-color: #41f795;
+    margin-right: 18px;
+}
+
+.prev-color::after{
+    content: "";
+    position: absolute;
+    top: 578px;
+    left: 268px;
+    border: 1px solid #e0e0e0;
+    width: 227px;
+
+}
+
+.red {
+    margin-bottom: 26px;
+}
+
+.red-btn {
+    width: 20px;
+    height: 20px;
+    border-radius: 10px;
+    border: 1px solid #000000;
+    background-color: red;
+}
+
+
+.blue-btn {
+    width: 20px;
+    height: 20px;
+    border-radius: 10px;
+    border: 1px solid #000000;
+    background-color: #41b6f7;
+   
+}
+
+
+.figure {
+    width: 237px;
+    height: 237px;
+    background-color: #cccccc;
+    border: 1px solid #41b6f7;
+}
+
+ .fig1 {
+     background-color: #41b6f7
+}
+
+.fig2 {
+  background-color: coral;
+}
+
+ .fig3 {
+background-color: deeppink;
+ }
+
+ .fig4 {
+    background-color: #41b6f7
+}
+ 
+ .fig5 {
+    background-color: coral;
+}
+ 
+  .fig6 {
+    background-color: deeppink;
+  
+}
+
+  .fig7 {
+    background-color: #41b6f7
+}
+ 
+ .fig8 {
+    background-color: coral;
+}
+ 
+  .fig9 {
+    background-color: deeppink;
+} 
+
+.circle {
+    border-radius: 50%;
+}
+
